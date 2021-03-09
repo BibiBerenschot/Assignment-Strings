@@ -21,4 +21,3 @@ last_name_len = len(player[player.find(" "):])
 name_short = player[0:1] + '.' + player[player.find(" "):]
 chant = (first_name + '! ') * (len(first_name) - 1) + (first_name + '!')
 good_chant = chant[-1] != ' '
-print(name_short)
