@@ -16,8 +16,9 @@ report = f'{scoring_player1} scored in the {goal_0}nd minute\n{scoring_player2} 
 report_alternative = f'{scorers[0:6]} scored in the {scorers[7:9]}nd minute\n{scorers[11:21]} scored in the {scorers[22:24]}th minute'
 
 player = 'Oleksiy Mykhaylychenko'
-first_name = player[0:7]
-last_name_len = len(player[8:22])
-name_short = player[0:1] + '. ' + player[8:22]
+first_name = player[0:player.find(" ")]
+last_name_len = len(player[player.find(" "):])
+name_short = player[0:1] + '.' + player[player.find(" "):]
 chant = (first_name + '! ') * (len(first_name) - 1) + (first_name + '!')
 good_chant = chant[-1] != ' '
+print(name_short)
